@@ -1,0 +1,11 @@
+<h1>Bienvenue sur The Gossip Project</h1>
+
+<h2>Welcome!</h2>
+
+  <h2> Voici les gossips:</h2>
+        <% @gossip.each do |gossip| %>
+  <table class="table">
+    <td class="text-left"><%=  gossip.user.first_name %></td>
+    <td class="text-right"><%= link_to "#{gossip.title}", "/home/#{gossip.id}"%>
+    </table>
+<% end %>
